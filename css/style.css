@@ -27,7 +27,13 @@ h1 {
 
 .btn-adventure {
     background-color: aquamarine;
+    
 }
+.btn:hover {
+    background-color: teal;
+    
+}
+
 .btn-comedy {
     background-color: paleturquoise;
 }

@@ -1,3 +1,5 @@
-/**
- * Created by mehdifabienpazuki on 15/05/16.
- */
+var movieApp = angular.module("movieApp", []);
+
+movieApp.controller('formController', function ($scope) {
+
+});

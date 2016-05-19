@@ -1,4 +1,5 @@
 <!doctype html>
+<html lang="en" ng-app="movieApp">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -17,9 +18,20 @@
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
         
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="app/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+        <script src="node_modules/underscore/underscore.min.js"></script>
+        <script>
+            angular.module("movieApp", ['ui.router', 'ngResource']);
+        </script>
+        <script src="app/controllers/allMoviesController.js"></script><!-- file name for the controller that manages the movies here -->
+        <script src="app/controllers/formController.js"></script><!-- file name for the controller that manages the form controller here -->
+        <script src="app/partials.js"></script><!-- file name for the partial views here -->
     </head>
-    <body>
+    <body ng-controller ="allMovies">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -56,7 +68,6 @@
                                 <p>Comedy/Romance</p>
                                 <p>Eddie Murphy, Arsenio Hall, James Earl Jones</p>
                                 <p>An African prince goes to Queens, New York City to find a wife whom he can respect for her intelligence and will.</p>
-                            <p>Teresa's testing for github</p>
                             </div>
                         </div>
                     </div>
@@ -64,11 +75,23 @@
             </div>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+
+                <ul class="nav nav-pills pull-right">
+                    <li><a  ui-sref="movies">Home</a></li>
+                    <li><a  ui-sref="form">Form</a></li>
+                </ul>
+
+
+            <div ui-view></div>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="app/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="app/js/plugins.js"></script>
+        <script src="app/js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

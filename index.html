@@ -23,7 +23,7 @@
         <script src="node_modules/angular/angular.min.js"></script>
         <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="node_modules/angular-resource/angular-resource.min.js"></script>
-        <script src="node_modules/underscore/underscore.min.js"></script>
+        <script src="node_modules/underscore/underscore-min.js"></script>
         <script>
             angular.module("movieApp", ['ui.router', 'ngResource']);
         </script>
@@ -31,7 +31,7 @@
         <script src="app/controllers/formController.js"></script><!-- file name for the controller that manages the form controller here -->
         <script src="app/partials.js"></script><!-- file name for the partial views here -->
     </head>
-    <body ng-controller ="allMovies">
+    <body ng-controller ="allMoviesController">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -41,7 +41,7 @@
                 <div class="text-center">
                     <h1>Which movie should I watch?</h1>
                     <button class="btn btn-lg">Give me a Random one</button>
-                    <div class="row"> 
+                    <div class="row">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 margintop2em">
                             <button class="btn btn-adventure ">Adventure</button>
                             <button class="btn btn-comedy">Comedy</button>

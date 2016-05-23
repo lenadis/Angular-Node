@@ -1,5 +1,5 @@
-var movieApp = angular.module("movieApp", []);
+var movieApp = angular.module("movieApp");
 
-movieApp.controller('allMoviesController', function ($scope) {
+movieApp.controller('allMoviesController', function ($scope, $state, $stateParams, $http) {
 
 });

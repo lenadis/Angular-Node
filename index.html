@@ -2,11 +2,11 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" ng-app="myApp"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Which Movie Should I Watch?</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -15,23 +15,26 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
         <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
         
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <div class="container"  ng-controller = "MyController">
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 margintop2em">
                 <div class="text-center">
                     <h1>Which movie should I watch?</h1>
-                    <button class="btn btn-lg">Give me a Random one</button>
+                    <div class="btn btn-lg navld hvr-grow"><a ui-sref="movie" ui-sref-active="active" role="button">Give me a Random one</a></div>
                     <div class="row"> 
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 margintop2em">
-                            <button class="btn btn-adventure ">Adventure</button>
+                            <button class="btn btn-adventure">Adventure</button>
                             <button class="btn btn-comedy">Comedy</button>
                             <button class="btn btn-drama">Drama</button>
                             <button class="btn btn-horror">Horror</button>
@@ -41,28 +44,14 @@
                             <button class="btn btn-animation">Animation</button>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 margintop2em">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-5">
-                                <img src="img/comingtoamericaposter.jpeg" class="img-responsive">
-                            </div>
-                            <div class="col-xs-12 col-sm-7">
-                                <h2>Coming to America</h2><p>1988</p>
-                                <img src="img/imdblogo.png">
-                                <p class="inline">: 6.9/10</p>
-                                <p>1h 56min</p>
-                                <p>Comedy/Romance</p>
-                                <p>Eddie Murphy, Arsenio Hall, James Earl Jones</p>
-                                <p>An African prince goes to Queens, New York City to find a wife whom he can respect for her intelligence and will.</p>
-                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div>   
+            </div> 
         </div>
+        <div class="thumbnail0" ui-view>
+                <!--content from pages -->
+        </div>
+        </div>
+         
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

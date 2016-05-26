@@ -1,19 +1,19 @@
 
 <div class="container">
     <h2>Contact Us!</h2>
-        <h3>If you have any questions, comments or suggestions, please fill in this form and we'll get back to you.</h3>
+    <h3>If you have any questions, comments or suggestions, please fill in this form and we'll get back to you.</h3>
     <section class="movieform">
         <form novalidate name="myform" ng-submit="saveForm()">
 
 
-            <div class="row">
+            <div class="row" ng-controller="formController" >
                 <label class="col-lg-3 col-md-3 col-sm-10 control-label" for="inputFirstName">Your First Name</label>
                 <div class="col-lg-3 col-md-3 col-sm-10">
                     <input id="inputFirstName"
                            name="inputFirstName"
                            type="text" placeholder="Enter your first name"
                            class="form-control input-md"
-                           ng-model="movieApp.inputFirstName"
+                           ng-model="contact.inputFirstName"
                            ng-required="true">
                     <p ng-show="myform.inputFirstName.$invalid && myform.inputFirstName.$touched">
                         You must fill in your first name.</p>
@@ -25,7 +25,7 @@
                            name="inputLastName"
                            type="text" placeholder="Enter your last name"
                            class="form-control input-md"
-                           ng-model="movieApp.inputLastName"
+                           ng-model="contact.inputLastName"
                            ng-required="true">
                     <p ng-show="myform.inputLastName.$invalid && myform.inputLastName.$touched">
                         You must fill in your last name.</p>
@@ -37,8 +37,9 @@
                            name="inputEmail"
                            type="text" placeholder="Enter your Email"
                            class="form-control input-md"
-                           ng-model="movieApp.inputEmail"
+                           ng-model="contact.inputEmail"
                            ng-required="true">
+                           <input type="submit" id="submit" value="Submit" />
                     <p ng-show="myform.inputEmail.$invalid && myform.inputEmail.$touched">
                         You must fill in your email.</p>
                 </div>
@@ -50,8 +51,10 @@
                               rows="8"
                               placeholder="Enter your message"
                               class="form-control input-md"
-                              ng-model="movieApp.inputMessage">
+                              ng-model="contact.inputMessage">
+                        <input type="submit" id="submit" value="Submit" />
                     </textarea>
+                    <input type="submit" id="submit" value="Submit" />
                 </div>
 
             </div>
@@ -63,5 +66,21 @@
 
     </section>
 </div>
+
+
+<!--<div >
+    <h2>Email list:</h2>
+    <ul>
+        <li ng-repeat="contact in contacts track by $index">{{ contact }}</li>
+    </ul>
+    <h2>Add contact</h2>
+    <form ng-submit="addMail(mailAddress)">
+        <input type="mail" ng-model="mailAddress"/>
+        <button type="submit">Add contact</button>
+    </form>
+</div>-->
+
+
+
 
 <div ui-view></div>

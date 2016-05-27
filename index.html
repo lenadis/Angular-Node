@@ -34,14 +34,29 @@
                     <div class="btn btn-lg navld hvr-grow"><a ui-sref="movie" ui-sref-active="active" role="button">Give me a Random one</a></div>
                     <div class="row"> 
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 margintop2em">
-                            <button class="btn btn-adventure">Adventure</button>
-                            <button class="btn btn-comedy">Comedy</button>
-                            <button class="btn btn-drama">Drama</button>
-                            <button class="btn btn-horror">Horror</button>
-                            <button class="btn btn-thriller">Thriller</button>
-                            <button class="btn btn-scifi">Sci-Fi</button>
-                            <button class="btn btn-romance">Romance</button>
-                            <button class="btn btn-animation">Animation</button>
+                            <div class="btn btn-adventure">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Adventure')" role="button">Adventure</a></div>
+                            <div class="btn btn-comedy">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Comedy')" role="button">Comedy</a>
+                            </div>
+                            <div class="btn btn-drama">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Drama')" role="button">Drama</a>
+                                    </div>
+                            <div class="btn btn-horror">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Horror')" role="button">Horror</a>
+                            </div>
+                            <div class="btn btn-thriller">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Thriller')" role="button">Thriller</a>
+                            </div>
+                            <div class="btn btn-scifi">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Sci-Fi')" role="button">Sci-Fi</a>
+                            </div>
+                            <div class="btn btn-romance">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Romance')" role="button">Romance</a>
+                            </div>
+                            <div class="btn btn-animation">
+                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Animation')" role="button">Animation</a>
+                            </div>
                         </div>
                     </div>
                 </div>   

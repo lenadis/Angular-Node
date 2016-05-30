@@ -2,12 +2,16 @@ var myApp = angular.module('myApp',['ui.router']);
 
 myApp.controller('MyController', function MyController($scope, $http) {
     $http.get("api.json")
-//    $http.get("http://nodeexamapi.herokuapp.com/movies")
+//   $http.get("http://nodeexamapi.herokuapp.com/movies")
     .then(function(response) {
         $scope.allmovies = response.data;
         myrandnumb = Math.floor(Math.random() * $scope.allmovies.length);
-        $scope.movie = response.data[myrandnumb];
+        $scope.movie =$scope.allmovies[myrandnumb];
     });
+    $scope.movieRandom = function() {
+        myrandnumb = Math.floor(Math.random() * $scope.allmovies.length);
+        $scope.movie =$scope.allmovies[myrandnumb];
+    }
     $scope.randomMovie
     $scope.filterByGenre = function(genre) {
         filteredarray = []
@@ -24,7 +28,7 @@ myApp.controller('MyController', function MyController($scope, $http) {
 });
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/index.html");
+    $urlRouterProvider.otherwise("");
   
   $stateProvider
 //        .state('frontpage', {

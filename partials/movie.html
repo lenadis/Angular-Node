@@ -7,15 +7,23 @@
             
             </div>
             <div class="col-xs-12 col-sm-7">
-                <h2>{{ movie.name }}</h2><p>{{ movie.year_of_release }}</p>
-                <img src="img/imdblogo.png"></img>
-                <p class="inline"> {{ movie.imdb_rating }}</p>
-                <p>{{ movie.length }}</p>
-                <p>{{ movie.genre }}</p>
+                <h2>{{ movie.name }}</h2>
+                <hr>
+                <div class="row">
+                    <div class= "col-sm-6 pull-sm-right">
+                        <p>{{ movie.genre }}</p>
+                        <img src="img/imdblogo.png"></img>
+                        <p class="inline"> : {{ movie.imdb_rating }}</p>
+                    </div>
+                    <div class="col-sm-6 pull-sm-left">
+                        <p>{{ movie.year_of_release }}</p>
+                        <p>{{ movie.length }}</p>
+                    </div>
+                </div>
                 <p class="inline" ng-repeat="actor in movie.main_actors">
-                    {{ actor }}{{$last ? '.' : ', '}}
-                    
+                    {{ actor }}{{$last ? '.' : ', '}}   
                 </p>
+                <hr>
                 <p>{{ movie.description }}</p>
                            
             </div>

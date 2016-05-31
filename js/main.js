@@ -12,7 +12,7 @@ myApp.controller('MyController', function MyController($scope, $http) {
         myrandnumb = Math.floor(Math.random() * $scope.allmovies.length);
         $scope.movie =$scope.allmovies[myrandnumb];
     }
-    $scope.randomMovie
+    
     $scope.filterByGenre = function(genre) {
         filteredarray = []
         for(i=0; i < $scope.allmovies.length; i++){

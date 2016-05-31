@@ -18,6 +18,9 @@ a:hover {
 .margintop2em {
     margin-top: 2em;
 }
+.marginbottom2em {
+    margin-bottom: 2em;
+}
 
 .inline {
     display: inline;

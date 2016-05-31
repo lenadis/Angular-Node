@@ -28,52 +28,61 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="container"  ng-controller = "MyController">
-        <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 margintop2em">
-                <div class="text-center">
-                    <h1>Which movie should I watch?</h1>
-                    <div class="btn btn-lg navld hvr-grow"><a ui-sref="movie" ui-sref-active="active" role="button" ng-click="movieRandom()">Give me a Random one</a></div>
-                    <div class="row"> 
-                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 margintop2em">
-                            <div class="btn btn-adventure">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Adventure')" role="button">Adventure</a></div>
-                            <div class="btn btn-comedy">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Comedy')" role="button">Comedy</a>
-                            </div>
-                            <div class="btn btn-drama">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Drama')" role="button">Drama</a>
-                                    </div>
-                            <div class="btn btn-horror">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Horror')" role="button">Horror</a>
-                            </div>
-                            <div class="btn btn-thriller">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Thriller')" role="button">Thriller</a>
-                            </div>
-                            <div class="btn btn-scifi">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Sci-Fi')" role="button">Sci-Fi</a>
-                            </div>
-                            <div class="btn btn-romance">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Romance')" role="button">Romance</a>
-                            </div>
-                            <div class="btn btn-animation">
-                                <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Animation')" role="button">Animation</a>
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="nav nav-pills pull-right">
+                        <li><a  class="btn" ui-sref="movie">Home</a></li>
+                        <li><a  class="btn" ui-sref="form">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 margintop2em">
+                    <div class="text-center">
+                        <h1>Which movie should I watch?</h1>
+                        <div class="btn btn-lg navld hvr-grow">
+                            <a ui-sref="movie" ui-sref-active="active" role="button" ng-click="movieRandom()">Give me a Random one</a>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-2 margintop2em">
+                                <div class="btn btn-adventure">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Adventure')" role="button">Adventure</a></div>
+                                <div class="btn btn-comedy">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Comedy')" role="button">Comedy</a>
+                                </div>
+                                <div class="btn btn-drama">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Drama')" role="button">Drama</a>
+                                        </div>
+                                <div class="btn btn-horror">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Horror')" role="button">Horror</a>
+                                </div>
+                                <div class="btn btn-thriller">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Thriller')" role="button">Thriller</a>
+                                </div>
+                                <div class="btn btn-scifi">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Sci-Fi')" role="button">Sci-Fi</a>
+                                </div>
+                                <div class="btn btn-romance">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Romance')" role="button">Romance</a>
+                                </div>
+                                <div class="btn btn-animation">
+                                    <a ui-sref="movie" ui-sref-active="active" ng-click="filterByGenre('Animation')" role="button">Animation</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>   
-            </div> 
-        </div>
-        <div class="thumbnail0" ui-view>
-                <!--content from pages -->
-        </div>
-        </div>
-         
+                    </div>   
+                </div> 
+            </div>
+            <div ui-view>
+                    <!--content from pages -->
+            </div>
+        </div> <!--container end -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/formController.js"></script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

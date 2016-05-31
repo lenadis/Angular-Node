@@ -36,10 +36,16 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 //          templateUrl: "partials/frontpage.html"
 //        })
     
-      .state('movie', {
-      url: "/movie",
-      templateUrl: "partials/movie.html"
-    })
+        .state('movie', {
+        url: "/movie",
+        templateUrl: "partials/movie.html"
+        })
+      
+        .state('form', {
+        url: "/form",
+        templateUrl: "partials/form.html",
+        controller: 'formController'
+        })
     
     
 });

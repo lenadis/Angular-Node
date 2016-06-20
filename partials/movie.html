@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 margintop2em">
-        <h2 class="text-center">What about this one?</h2>
+        <h2 class="text-center marginbottom2em ">What about this one?</h2>
         <div class="row">
             <div class="col-xs-12 col-sm-5">
                 <img src=" {{ movie.image }} " class="img-responsive"></img>
@@ -28,8 +28,8 @@
                            
             </div>
         </div>
-        <div class="btn btn-lg navld hvr-grow">
-            <a ui-sref="movie" ui-sref-active="active" role="button">This one looks like shit, give me another one</a>
+        <div class="btn btn-lg navld hvr-grow pull-right">
+            <a ui-sref="movie" ui-sref-active="active" role="button" ng-click="movieRandom()">This one looks like shit, give me another one!</a>
         </div>
     </div>
 </div>

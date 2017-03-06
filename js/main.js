@@ -2,7 +2,7 @@ var myApp = angular.module('myApp',['ui.router']);
 
 myApp.controller('MyController', function MyController($scope, $http) {
    //$http.get("api.json")
-   $http.get("http://nodeexamapi.herokuapp.com/movies")
+   $http.get("https://nodeexamapi.herokuapp.com/movies")
     .then(function(response) {
         $scope.allmovies = response.data;
         myrandnumb = Math.floor(Math.random() * $scope.allmovies.length);
